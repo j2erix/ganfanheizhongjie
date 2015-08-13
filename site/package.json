@@ -1,0 +1,26 @@
+{
+  "name": "ganfanheizhongjie",
+  "version": "1.0.0",
+  "description": "干翻黑中介",
+  "main": "ganfanheizhongjie.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express3-handlebars": "^0.5.2"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5",
+    "zombie": "^4.0.13"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel/register"
+  },
+  "keywords": [
+    "黑中介",
+    "干饭黑中介",
+    "ganfanheizhongjie"
+  ],
+  "author": "fezhengjin",
+  "license": "ISC"
+}

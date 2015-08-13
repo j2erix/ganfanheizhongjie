@@ -2,24 +2,24 @@ var rules = [{
 	site: '58.com',
 	tel: '#t_phone',
 	name: '.jjreninfo_des_jjr span a',
-	selectors: [{
-		selector: '.jjreninfo_des'
-	}, {
-		selector: '.jjreninfo_pic a'
-	}, {
-		selector: '.bottom_bar .tel'
-	}]
+	// selectors: [{
+		selector: '.jjreninfo_des_jjr #t_phone'
+	// }, {
+	// 	selector: '.jjreninfo_pic a'
+	// }, {
+	// 	selector: '.bottom_bar .tel'
+	// }]
 }, {
 	site: 'ganji.com',
 	tel: '.contact-mobile',
 	name: '.person-name span a',
-	selectors: [{
+	// selectors: [{
 		selector: '.contact-mobile'
-	}, {
-		selector: '.rightBar .right-border .col-right:first-child'
-	}, {
-		selector: '.bot-floating-mobile'
-	}]
+	// }, {
+	// 	selector: '.rightBar .right-border .col-right:first-child'
+	// }, {
+	// 	selector: '.bot-floating-mobile'
+	// }]
 }];
 
 var targets = [{
@@ -68,12 +68,17 @@ Helper.normalizeTel = function(tel) {
 
 var UI = UI || {};
 UI.setBlackTags = function(rule) {
-	$(rule.selectors).each(function(index, item) {
-		$(item.selector).addClass(targetClass);	
-		if (item.classes) {
-			$(item.selector).addClass(item.classes);
-		}
-	});
+	// $(rule.selectors).each(function(index, item) {
+	// 	$(item.selector).addClass(targetClass);	
+	// 	if (item.classes) {
+	// 		$(item.selector).addClass(item.classes);
+	// 	}
+	// });
+	var flag = 	$('<div class="heizhongjie"></div>');
+	var selector = $(rule.selector);
+	var offset = selector.offset();
+	flag.css(offset)
+		.appendTo(document.body);
 };
 
 function init () {
